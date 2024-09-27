@@ -3,14 +3,14 @@ pipeline {
 
     environment {
         REPO_URL = 'https://github.com/mbsandur11/store.git'
-        APP_DIR = '/path/to/your/application' // Directory where you want to deploy the app
+        APP_DIR = '/store/app' // Update this to your desired directory
     }
 
     stages {
         stage('Clone Repository') {
             steps {
                 // Clone the GitHub repository
-                git url: https://github.com/mbsandur11/store.git
+                git branch: 'main', url: https://github.com/mbsandur11/store.git
             }
         }
 
